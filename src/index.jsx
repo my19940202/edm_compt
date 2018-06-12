@@ -12,7 +12,3 @@ ReactDOM.render(
     </div>,
     document.getElementById("app")
 );
-
-setTimeout(() => {
-    console.log('fuck yop')
-}, 2000)
