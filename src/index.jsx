@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Header } from "./component/edm/header";
-import { Footer } from "./component/edm/footer";
-import { Content } from "./component/edm/content";
+import { Header } from "./component/header";
+import { Footer } from "./component/footer";
+import { Content } from "./component/content";
 ReactDOM.render(
     <div>
         <Header/>
