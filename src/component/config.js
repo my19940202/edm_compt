@@ -23,6 +23,18 @@ export let imgTable = {
     },
     src: 'images/key_view.jpg'
 };
+export let imgsTable = {
+    type: 'imgs',
+    style: [{
+            height: 'auto',
+            width: 760,
+        }, {
+            height: 'auto',
+            width: 760,
+        }
+    ],
+    src: ['images/place_2.jpg','images/place_1.jpg']
+};
 export let posterTable = {
     type: 'img',
     style: {

@@ -25,8 +25,7 @@ export class MyTable extends React.Component {
 
         if (data.type === 'text') {
             html = (
-                <tr><td><table>
-                <tbody>
+                <tr><td><table><tbody>
                     <tr>
                         {
                             tdList.map(function (item, idx) {
@@ -38,14 +37,12 @@ export class MyTable extends React.Component {
                             })
                         }
                     </tr>
-                </tbody>
-            </table></td></tr>
+                </tbody></table></td></tr>
             );
         }
         if (data.type === 'img') {
             html = (
-                <tr><td><table>
-                <tbody>
+                <tr><td><table><tbody>
                     <tr>
                         {
                             tdList.map(function (item, idx) {
@@ -68,8 +65,7 @@ export class MyTable extends React.Component {
                             })
                         }
                     </tr>
-                </tbody>
-            </table></td></tr>
+                </tbody></table></td></tr>
             );
         }
         return html;

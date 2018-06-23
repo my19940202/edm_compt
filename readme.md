@@ -9,5 +9,8 @@
 ### WAP形式的EDM 基本类似
 
 ## 如何获取渲染好的html
+目前就是采取了outterHTML复制到了缓存区
 
 
+
+#  顺便学习一下redux-react 相关知识点

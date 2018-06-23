@@ -11,6 +11,7 @@ if (process.argv.indexOf('-p') > -1) {
 module.exports = {
     entry: {
         index: __dirname + "/src/index",
+        redux_test: __dirname + "/src/redux_test",
     },
     output: {
         filename: '[name].js',
