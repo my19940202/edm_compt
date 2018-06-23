@@ -50,7 +50,7 @@ class TodoList extends React.Component {
 }
 
 
-// Action: 啥不做什么只是，表意（表达action的发生）
+// Action: 只表意（表达action的发生），只被别人操作
 const addAction = (words) => {
     return {
         type: 'add',
@@ -70,7 +70,6 @@ const toggleAction = (idx) => {
 
 // Reducer: reducer 接收 state action 处理数据
 function reducer(state = { name: '',todoList: [] }, action) {
-    console.log(state, action);
     let name = action.name;
     switch (action.type) {
         case 'add':
