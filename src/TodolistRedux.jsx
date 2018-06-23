@@ -75,7 +75,8 @@ function reducer(state = { name: '',todoList: [] }, action) {
     switch (action.type) {
         case 'add':
             return {
-                // 在原来 state 上继续concat todoList
+                name: '',
+                // 在原来 state上继续concat todoList
                 todoList: state.todoList.concat({
                     done: false,
                     content: name
@@ -84,8 +85,10 @@ function reducer(state = { name: '',todoList: [] }, action) {
         case 'change':
             return { name, todoList: state.todoList}
         case 'toggle':
+            // 不管何时更新了一个嵌套的值，都必须同时返回上层的任何数据副本给 state 树
+            // 直接修改 state 因为框架问题 不能判断出 diff
             state.todoList[action.idx].done = !state.todoList[action.idx].done;
-            return {todoList: state.todoList }
+            return {name: state.name, todoList: state.todoList.concat([]) }
         default:
             return state;
     }
