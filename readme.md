@@ -30,3 +30,4 @@ TODO: 还需要学习
 > https://github.com/jackielii/simplest-redux-example/blob/master/index.js 
 > 参考例子 simplest-redux
 > http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_three_react-redux.html
+> https://segmentfault.com/a/1190000010361753
