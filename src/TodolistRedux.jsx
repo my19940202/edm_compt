@@ -26,7 +26,7 @@ class TodoList extends React.Component {
                     onKeyPress={e => this.handleAdd(e.which, e.target.value)}
                     />
                 <p>this is name: {name}</p>
-                <ul style={ulStyle} onClick={toggle}>
+                <ul style={ulStyle} onClick={(e) => toggle(e.target.attributes.data.value)}>
                     {
                         todoList && todoList.map((item, idx) => {
                             let style = styleUnDone;
@@ -64,10 +64,13 @@ const changeAction = (words) => {
     }
 }
 
-const toggleAction = { type: 'toggle' }
+const toggleAction = (idx) => {
+    return  {type: 'toggle',idx}
+}
 
 // Reducer: reducer 接收 state action 处理数据
 function reducer(state = { name: '',todoList: [] }, action) {
+    console.log(state, action);
     let name = action.name;
     switch (action.type) {
         case 'add':
@@ -81,9 +84,10 @@ function reducer(state = { name: '',todoList: [] }, action) {
         case 'change':
             return { name, todoList: state.todoList}
         case 'toggle':
+            state.todoList[action.idx].done = !state.todoList[action.idx].done;
             return {todoList: state.todoList }
         default:
-            return state
+            return state;
     }
 }
 
@@ -103,7 +107,7 @@ function mapDispatchToProps(dispatch) {
   return {
     add: (words) => dispatch(addAction(words)),
     change: (words) => dispatch(changeAction(words)),
-    toggle: () => dispatch(toggleAction)
+    toggle: (idx) => dispatch(toggleAction(idx))
   }
 }
 
