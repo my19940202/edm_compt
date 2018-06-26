@@ -1,6 +1,6 @@
 export const track_code = '?Del_id=<%= message.delivery.id %>&utm_source=<%= targetData.SOURCE %>&utm_medium=<%= targetData.MEDIUM %>&utm_campaign=<%= targetData.TRACKINGGAP %>&UIDCM=<%= CLNEOTB.neolib %>';
-export const header_title = '端午小长假限时优惠';
-export const header_link = `https://www.clubmed.com.cn/I/long_weekend_escape_page${track_code}`;
+export const header_title = '缤纷活动尽在Club Med';
+export const header_link = `https://www.clubmed.com.cn/r/%E5%8D%A1%E5%B0%BC%E5%B2%9B/y`;
 
 
 // footer
@@ -9,20 +9,12 @@ export const img_telephone = 'images/telephone.jpg';
 export const img_code = 'images/qr_code.jpg';
 
 
-
 // content
 export let emptyTable = {
     type: 'space',
     style: {height:  30}
 };
-export let imgTable = {
-    type: 'img',
-    style: {
-        height: 'auto',
-        width: 760,
-    },
-    src: 'images/key_view.jpg'
-};
+
 export let imgsTable = {
     type: 'imgs',
     style: [{

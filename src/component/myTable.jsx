@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import {track_code} from './config';
 
 export class MyTable extends React.Component {
     constructor(props) {
@@ -11,8 +11,21 @@ export class MyTable extends React.Component {
         let style = {};
         let arr = [];
         Object.assign(style, data.block);
-        style.width = Math.floor((w - data.style.width || 0) / 2);
-        arr.push({style}, data, {style});
+        if (data.style.length) {
+            let imgsNum = data.style.length;
+            style.width = Math.floor((w - imgsNum * (data.style[0].width || 0)) / (imgsNum + 1));
+            for (var i = 0; i < imgsNum; i++) {
+                let tmpData = {
+                    style: data.style[i],
+                    src: data.src[i],
+                    href: data.href[i],
+                };
+                arr.push({style}, tmpData);
+            }
+        } else {
+            style.width = Math.floor((w - data.style.width || 0) / 2);
+            arr.push({style}, data);
+        }
         return arr;
     }
 
@@ -25,13 +38,13 @@ export class MyTable extends React.Component {
 
         if (data.type === 'text') {
             html = (
-                <tr><td><table><tbody>
+                <tr style={data.outterStyle}><td><table><tbody>
                     <tr>
                         {
                             tdList.map(function (item, idx) {
                                 return (
                                     <td style={item.style} key={idx}>
-                                        <p style={item.style} dangerouslySetInnerHTML={{__html: item.content}} />
+                                        <div style={item.style} dangerouslySetInnerHTML={{__html: item.content}} />
                                     </td>
                                 );
                             })
@@ -40,7 +53,7 @@ export class MyTable extends React.Component {
                 </tbody></table></td></tr>
             );
         }
-        if (data.type === 'img') {
+        if (data.type === 'img' || data.type === 'imgs') {
             html = (
                 <tr><td><table><tbody>
                     <tr>
@@ -57,7 +70,7 @@ export class MyTable extends React.Component {
                                 if (item.href) {
                                     img = (
                                         <td style={item.style} key={idx}>
-                                            <a href={item.href}><img src={item.src} /></a>
+                                            <a href={item.href + track_code}><img src={item.src} /></a>
                                         </td>
                                     );
                                 }
@@ -73,77 +86,4 @@ export class MyTable extends React.Component {
     render() {
         return this.generHTML(this.props.data);
     }
-    /*
-    render() {
-        let tdList = [];
-        let props = this.props;
-        switch(props.data.type) {
-            case 'space':
-                let space = props.data;
-                tdList.push({
-                    style:{
-                        width: space.w || 0,
-                        height: space.h || 0
-                    }
-                });
-                break;
-            
-            case 'img':
-            case 'text':
-                let img = props.data;
-                let side = {
-                    style: {width: (800 - img.style.width || 0) / 2}
-                };
-                let itemContent = {
-                    style: img.style
-                };
-                tdList.push(side);
-                
-                if (img.type === 'img') {
-                    itemContent.img = true;
-                    itemContent.src = img.src;
-                }
-                if (img.type === 'text') {
-                    itemContent.text = true;
-                    itemContent.content = img.content;
-                }
-                tdList.push(itemContent);
-                tdList.push(side);
-                break;
-            default:
-                tdList = [];
-        };
-        
-        return (
-            <tr><td><table>
-                <tbody>
-                    <tr>
-                        {
-                            tdList.map(function (item, idx) {
-                                let itemX = (
-                                    <td style={item.style} key={idx}></td>
-                                );
-                                if (item.img) {
-                                    itemX = (
-                                        <td style={item.style} key={idx}>
-                                            <img src={item.src} />
-                                        </td>
-                                    );
-                                }
-                                if (item.text) {
-                                    itemX = (
-                                        <td style={item.style} key={idx}>
-                                            <p style={item.style}>{item.content}</p>
-                                        </td>
-                                    );
-                                }
-                                return itemX;
-                            })
-                        }
-                    </tr>
-                </tbody>
-            </table></td></tr>
-        );
-    }
-    */ 
 };

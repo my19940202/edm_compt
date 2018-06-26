@@ -10,12 +10,11 @@ let vip_html = `
                         <table>
                             <tr>
                                 <td align="top" style="vertical-align: top;text-align: left;"  width="510" height="114" bgcolor="#ffffff">
-                                    <p style="font-size: 16px;line-height: 24px;">
+                                    <p style="font-size: 16px;line-height: 28px;">
                                         亲爱的<%@ include view='FirstNameGC' %>：<br/><br/>
-                                        为什么越来越多的父母相信我们的度假产品？因为他们深知自己的孩子在Club Med收获的
-                                        不仅仅有纯粹的欢乐还有能力的提升。无论是2-3岁的儿童还是17岁的青年，我们根据度假
-                                        村的情况为他们提供了一系列的设施和活动，在专业热情G.O的带领下他们会很快融入这个
-                                        欢乐的氛围，并探索自身发展的潜能。
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果要在全世界选一个最适合情侣度假的地方，很多人会毫不犹豫地说—— <span style="font-weight:bolder;color:#005589;">马尔代夫</span>！<br/>
+                                        而在Club Med<span style="font-weight:bolder;color:#005589;">卡尼岛</span>度假村，马尔代夫已经不再只是情侣的代名词，<span style="font-weight:bolder;color:#005589;">全新</span>的欢乐儿童角与四间主题活动教室；<span style="font-weight:bolder;color:#005589;">全新</span>的潜水中心；<span style="font-weight:bolder;color:#005589;">全新</span>升级设施的水上套房满足您与宝贝一通尽享美妙体验。<br/>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了感谢您的支持，即日起至7月31日预订卡尼岛度假村，<span style="font-size:21px;font-weight:bolder;color:#99d7e3;">4-11岁儿童立享半价</span>！
                                     </p>
                                 </td>
                             </tr>
