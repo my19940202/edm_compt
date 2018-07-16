@@ -18,8 +18,10 @@ export class MyTable extends React.Component {
                 let tmpData = {
                     style: data.style[i],
                     src: data.src[i],
-                    href: data.href[i],
                 };
+                if (data.href) {
+                    tmpData.href = data.href[i];
+                }
                 arr.push({style}, tmpData);
             }
         } else {
@@ -70,7 +72,7 @@ export class MyTable extends React.Component {
                                 if (item.href) {
                                     img = (
                                         <td style={item.style} key={idx}>
-                                            <a href={item.href + track_code}><img src={item.src} /></a>
+                                            <a href={item.href + track_code}><img style={item.style} src={item.src} /></a>
                                         </td>
                                     );
                                 }

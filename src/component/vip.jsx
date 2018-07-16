@@ -12,10 +12,17 @@ let vip_html = `
                                 <td align="top" style="vertical-align: top;text-align: left;"  width="510" height="114" bgcolor="#ffffff">
                                     <p style="font-size: 16px;line-height: 28px;">
                                         亲爱的<%@ include view='FirstNameGC' %>：<br/><br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果要在全世界选一个最适合情侣度假的地方，很多人会毫不犹豫地说—— <span style="font-weight:bolder;color:#005589;">马尔代夫</span>！<br/>
-                                        而在Club Med<span style="font-weight:bolder;color:#005589;">卡尼岛</span>度假村，马尔代夫已经不再只是情侣的代名词，<span style="font-weight:bolder;color:#005589;">全新</span>的欢乐儿童角与四间主题活动教室；<span style="font-weight:bolder;color:#005589;">全新</span>的潜水中心；<span style="font-weight:bolder;color:#005589;">全新</span>升级设施的水上套房满足您与宝贝一通尽享美妙体验。<br/>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了感谢您的支持，即日起至7月31日预订卡尼岛度假村，<span style="font-size:21px;font-weight:bolder;color:#99d7e3;">4-11岁儿童立享半价</span>！
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;炎炎夏日，还没有决定与TA前往何处共度夏季假期吗？
+                                        <span style="font-weight:bolder;color:#99d7e3;">Club Med为您精选9座亚太度假村</span>,无论是阳光明媚，海风习习的海岛游或感受独具魅力的泰国、印度尼西亚特色文化或置身天然森林氧吧，体验一次健康之旅，您都可在Club Med度假村中尽情享受。
+                                        <br/><br/>
                                     </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="top" style="vertical-align: top; text-align: center;"  width="510" bgcolor="#ffffff">
+                                    <a href="https://www.clubmed.com.cn/r/%E5%8D%A1%E5%B0%BC%E5%B2%9B/y">
+                                        <img src="images/btn_book.jpg" style="margin: 0 auto;"  width="162" height="50" alt="假期早规划优惠享不停 " />
+                                    </a>
                                 </td>
                             </tr>
                         </table>
@@ -38,7 +45,7 @@ let vip_html = `
                                                     <%@ include view='GreatMemberStatusCH' %>
                                                     <br><br><br><br>
                                                     <a href="https://www.clubmed.com.cn/signin?utm_source=edm&utm_medium=Email&utm_campaign=EM_EA3Y_sunS18EBBPhase10306&utm_content=edm&cmcid=EM_sunS18EBBPhase10306" target="_blank" style="display: block;margin: 0 auto;width: 140px;">
-                                                        <img src="images/btn.jpg" width="149" height="40" alt="假期早规划优惠享不停 " style="display:block;">
+                                                        <img src="images/asset/btn.jpg" width="149" height="40" alt="假期早规划优惠享不停 " style="display:block;">
                                                     </a>
                                                 </p>
                                             </td>

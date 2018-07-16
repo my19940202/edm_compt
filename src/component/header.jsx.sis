@@ -1,5 +1,5 @@
 import * as React from "react";
-import {track_code, header_title, logo_link} from './config';
+import {track_code, header_title, header_link} from './config';
 const style1:any = {
     fontSize: 12,
     textAlign: 'center',
@@ -7,7 +7,7 @@ const style1:any = {
     padding: 0,
     color: '#6E6E6E',
 };
-const logoImg = 'images/asset/logo.jpg';
+const logoImg = 'images/logo.jpg';
 
 
 export class Header extends React.Component {
@@ -41,7 +41,7 @@ export class Header extends React.Component {
                             <font face="'Microsoft Yahei', Arial, Helvetica, sans-serif"
                                 style={style1}
                                 >
-                                <a style={{color: '#d96c0d'}} href="https://www.clubmed.com.cn/r/%E5%8D%A1%E5%B0%BC%E5%B2%9B/y" target="_blank">{header_title}</a>
+                                <a style={{color: '#d96c0d'}} href={header_link} target="_blank">{header_title}</a>
                                 <br/><br/>在浏览器中阅读邮件，
                                 <a href="<%@ include view='MirrorPageURLGC' %>"  target="_blank" style={{textDecoration:'underline',color:'#6E6E6E'}}>点击这里</a>
                             </font>
@@ -53,13 +53,13 @@ export class Header extends React.Component {
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <a href={logo_link} target="_blank">
+                                        <a href={header_link} target="_blank">
                                             <img src={logoImg} width="270" height="78" alt="Club Med" style={{display: 'block'}} />
                                         </a>
                                     </td>
                                     <td style={{fontWeight: 'bold',color:'#005589',textAlign: 'right'}}>
                                         <p style={{paddingRight: 20}}>
-                                            联系我们<br />021-6197-2846
+                                            详情咨询<br />Club Med 旅行专家
                                         </p>
                                     </td>
                                 </tr>

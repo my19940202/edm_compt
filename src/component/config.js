@@ -1,12 +1,12 @@
 export const track_code = '?Del_id=<%= message.delivery.id %>&utm_source=<%= targetData.SOURCE %>&utm_medium=<%= targetData.MEDIUM %>&utm_campaign=<%= targetData.TRACKINGGAP %>&UIDCM=<%= CLNEOTB.neolib %>';
 export const header_title = '缤纷活动尽在Club Med';
-export const header_link = `https://www.clubmed.com.cn/r/%E5%8D%A1%E5%B0%BC%E5%B2%9B/y`;
+export const logo_link = `https://www.clubmed.com.cn/`;
 
 
 // footer
-export const img_site = 'images/site.jpg';
-export const img_telephone = 'images/telephone.jpg';
-export const img_code = 'images/qr_code.jpg';
+export const img_site = 'images/asset/site.jpg';
+export const img_telephone = 'images/asset/telephone.jpg';
+export const img_code = 'images/asset/qr_code.jpg';
 
 
 // content

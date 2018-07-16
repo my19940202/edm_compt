@@ -1,0 +1,21 @@
+import * as React from "react";
+import {img_site, img_telephone, img_code} from './config';
+export const Footer = () => {
+    return (
+        <table border="0" cellspacing="0" cellpadding="0" width="800" align="center">
+            <tbody>
+            <tr>
+                <td height="25"></td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <a href="<%@ include view='UnsubLinkGC' %>" target="_blank" style={{color:'#000',fontSize: 12}}>如果您不想收到Club Med特别优惠及相关信息,请点击这里</a>
+                </td>
+            </tr>
+            <tr>
+                <td height="25"></td>
+            </tr>
+            </tbody>
+        </table>
+    );
+};
