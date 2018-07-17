@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 
 import { Header } from "./component/header";
 import { Footer } from "./component/footer";
-import { Content } from "./component/content";
+import { Content } from "./component/content_0716";
 ReactDOM.render(
     <div>
         <Header/>

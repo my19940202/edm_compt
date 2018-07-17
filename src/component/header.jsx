@@ -41,7 +41,7 @@ export class Header extends React.Component {
                             <font face="'Microsoft Yahei', Arial, Helvetica, sans-serif"
                                 style={style1}
                                 >
-                                <a style={{color: '#d96c0d'}} href="https://www.clubmed.com.cn/r/%E5%8D%A1%E5%B0%BC%E5%B2%9B/y" target="_blank">{header_title}</a>
+                                <a style={{color: '#d96c0d'}} href="https://www.clubmed.com.cn/o/%E5%86%AC%E5%AD%A3%E5%81%87%E6%9C%9F%E6%97%A9%E9%B8%9F%E8%AE%A1%E5%88%92" target="_blank">{header_title}</a>
                                 <br/><br/>在浏览器中阅读邮件，
                                 <a href="<%@ include view='MirrorPageURLGC' %>"  target="_blank" style={{textDecoration:'underline',color:'#6E6E6E'}}>点击这里</a>
                             </font>
